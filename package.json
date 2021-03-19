@@ -1,0 +1,13 @@
+{
+  "name": "thanx",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "node -e \"(async () => console.log(await require('./index').handler('$npm_config_filename', '$npm_config_threshold', '$npm_config_months')))();\"",
+    "generate": "node -e \"(async () => console.log(await require('./index').generator('$npm_config_months')))();\""
+  },
+  "keywords": [],
+  "author": "Yifan Gu <evangyf@gmail.com>",
+  "license": "0BSD",
+  "description": ""
+}

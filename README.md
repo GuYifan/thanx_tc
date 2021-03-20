@@ -41,11 +41,13 @@ end: '2020-12-30'
 
 ## How to Run
 ```npm run test --filename=data.txt --threshold=100 --months=2```
+
 The default value for threshold is 200 if not given.
 The default value for months is 2 if not given.
 
 ## How to Generate Test Data
 ```npm run generate --months=1 --number=100```
+
 The generated file will be saved to ```./test_data.txt``` in the same directory.
 The default value for months is 2 if not given.
 The default value for nubmer of records is 100 if not given.

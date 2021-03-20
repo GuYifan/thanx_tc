@@ -54,3 +54,15 @@ The default value for nubmer of records is 100 if not given.
 
 ## Unit Tests
 ```npm run jest```
+
+## Complexity Analysis
+Assume the number of records is N.
+
+Step 1 reads all records so time is O(N).
+
+Step 2 iterates all records so so time is O(N). Space complexity is O(N) becuase needs to save all transformed data.
+
+Step 3 has two loops. The first loop is to go through all records. The second one is when moving forward the beginning of the window, it needs to iterate through from the old begin to new begin to calculate the amount to subctract so worst case scenario is (N-1). Thus the total complexity is O(N^2). Space complexity is O(M) and M is the number of users.
+
+## Optimization
+Step 3 could be optimized for shorter time by using more storage. Can use extra memory to store the amount spent from (that date - months) to that date for each date, so that don't need the second loop to calculate the amount to subtract. I just think the worst case scenario will only very rarely happen in reality so went with the current implementation.

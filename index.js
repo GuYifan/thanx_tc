@@ -39,7 +39,9 @@ const main = async (filename, threshold, months) => {
       if (!recordByDate[date]) {
         recordByDate[date] = {};
       }
-      recordByDate[date][user] = amount;
+      recordByDate[date][user] = recordByDate[date][user]
+        ? recordByDate[date][user] + amount
+        : amount;
     }
     // DEMO
     // console.log(recordByDate);

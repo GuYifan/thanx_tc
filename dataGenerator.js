@@ -17,6 +17,7 @@ const randomDate = (months) => {
 // generate purchase data for the given number of months
 const generateData = async (months, numOfRecords) => {
   months = months ? months : 2;
+  numOfRecords = numOfRecords ? numOfRecords : 100;
   let res = [];
   for (let i = 0; i < numOfRecords; i++) {
     res.push({

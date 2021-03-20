@@ -32,7 +32,6 @@ const main = async (filename, threshold, months) => {
     // i.e. {'2020-12-20' : {1: 50.23, 2: 40.24}} means on 2020-12-20
     // user 1 has bought for 50.23, user 2 has bought for 40.24
     let recordByDate = {};
-    let userIds = [];
     for (const index in purchaseRecords) {
       let user = purchaseRecords[index].user;
       let amount = purchaseRecords[index].amount;

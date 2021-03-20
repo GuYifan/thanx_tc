@@ -1,5 +1,9 @@
 # thanx
 
+## Get Started
+- Install Node.js
+- `npm install` to install all required dependencies
+
 ## General Idea
 
 To identify users who are eligible to become VIP based on the purchase records is done in 3 steps, and they are retrieving data, transform data to be aggregated by dates, then use a "sliding window" strategy to calculate the amount each user spent in this period and identify users whose amount meets the threshold.

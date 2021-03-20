@@ -81,8 +81,11 @@ const main = async (filename, threshold, months) => {
       // console.log(vipUsers);
     }
     // DEMO
-    // console.log('[Result] Userss qualified for VIP: ' + vipUsers.sort());
-    return vipUsers.sort();
+    // console.log(
+    //   '[Result] Userss qualified for VIP: ' +
+    //     vipUsers.sort((a, b) => (parseInt(a) < parseInt(b) ? -1 : 1))
+    // );
+    return vipUsers.sort((a, b) => (parseInt(a) < parseInt(b) ? -1 : 1));
   } catch (e) {
     throw e;
   }

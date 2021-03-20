@@ -4,11 +4,11 @@
 
 To identify users who are eligible to become VIP based on the purchase records is done in 3 steps, and they are retrieving data, transform data to be aggregated by dates, then use a "sliding window" strategy to calculate the amount each user spent in this period and identify users whose amount meets the threshold.
 
-* **Step 1 - Retrieve Data**
+1. **Step 1 - Retrieve Data**
 
 ⋅⋅⋅Read data from a given text file.
 
-* **Step 2 - Transform Data**
+2. **Step 2 - Transform Data**
 
 ⋅⋅⋅Iterate through the raw data and aggregate by date. As shown in the example below, each key is the date and the value is each user's purchase amount on that date.
 
@@ -20,7 +20,7 @@ Example:
 '2021-02-12': { '1': 50.8, '3': 54.2, '4': 25.5, '6': 40.7, '6': 50.8 }}
 ```
 
-* **Step 3 - Calculate Each User's Purchase Total Amount within the Given Period**
+3. **Step 3 - Calculate Each User's Purchase Total Amount within the Given Period**
 
 ⋅⋅⋅Iterate through data from step 2 using a sliding window strategy. The sliding window represents the given period (e.g. 2 months). Also, keep an record of each user's total spend amount for this period as the example below, which means in this period from '2021-01-10' to '2021-01-10' user 1 spent $221.5 and so on.
 

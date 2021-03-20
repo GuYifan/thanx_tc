@@ -34,9 +34,9 @@ end: '2020-12-30'
   "5": 52.3}
 ```
 
-   First, Anchor the beginning of the window to the first date and move forward the end of the window in each iteration.  
-   As the end of the window moves forward, if the distance between begin and end becomes bigger than the given period, then move begin forward as well, and update the user spent amount by subtracting the amount spend between the old begin and the new begin.
-   Lastly, in each iteration, check if any user's total amount reaches the threshold. If so, add the user to the result list.
+* First, Anchor the beginning of the window to the first date and move forward the end of the window in each iteration.  
+* As the end of the window moves forward, if the distance between begin and end becomes bigger than the given period, then move begin forward as well, and update the user spent amount by subtracting the amount spend between the old begin and the new begin.
+* Lastly, in each iteration, check if any user's total amount reaches the threshold. If so, add the user to the result list.
 
 
 ## How to Run

@@ -4,10 +4,14 @@
   "main": "index.js",
   "scripts": {
     "test": "node -e \"(async () => console.log(await require('./index').handler('$npm_config_filename', '$npm_config_threshold', '$npm_config_months')))();\"",
-    "generate": "node -e \"(async () => console.log(await require('./index').generator('$npm_config_months')))();\""
+    "generate": "node -e \"(async () => console.log(await require('./dataGenerator').generator('$npm_config_months', '$npm_config_number')))();\"",
+    "jest": "jest"
   },
   "keywords": [],
   "author": "Yifan Gu <evangyf@gmail.com>",
   "license": "0BSD",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
 }

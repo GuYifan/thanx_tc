@@ -13,7 +13,7 @@ To identify users who are eligible to become VIP based on the purchase records i
    Iterate through the raw data and aggregate by date. As shown in the example below, each key is the date and the value is each user's purchase amount on that date.
 
    Example:
-   ```
+```
 {'2020-12-02': { '1': 22.2 },
 '2020-12-30': { '1': 38.8, '2': 18.1, '3': 13.3, '4': 52.3, '5': 52.3 },
 '2021-01-15': { '2': 50.6, '6': 11.8 },
@@ -24,7 +24,7 @@ To identify users who are eligible to become VIP based on the purchase records i
  
    Iterate through data from step 2 using a sliding window strategy. The sliding window represents the given period (e.g. 2 months). Also, keep an record of each user's total spend amount for this period as the example below, which means in this period from '2021-01-10' to '2021-01-10' user 1 spent $221.5 and so on.
 
-   ```
+```
 begin: '2020-12-02'
 end: '2020-12-30'
 {"1": 61,

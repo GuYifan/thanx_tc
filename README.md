@@ -6,7 +6,7 @@
 
 ## General Idea
 
-To identify users who are eligible to become VIP based on the purchase records is done in 3 steps, and they are retrieving data, transform data to be aggregated by dates, then use a "sliding window" strategy to calculate the amount each user spent in this period and identify users whose amount meets the threshold.
+To identify users who are eligible to become VIP based on the purchase records is done in 3 steps, and they are retrieving data, transform data to be aggregated by dates, then use a "sliding window" strategy to calculate the amount each user spent in this period and identify users whose amount meets the threshold. Here it assumes 1 months = 30 days and it can be changed if necessary.
 
 1. **Step 1 - Retrieve Data**
  

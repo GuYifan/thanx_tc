@@ -66,7 +66,7 @@ Step 1 reads all records so time is O(N).
 
 Step 2 iterates all records so so time is O(N). Space complexity is O(N) becuase needs to save all transformed data.
 
-Step 3 has two loops. The first loop is to go through all records. The second one is when moving forward the beginning of the window, it needs to iterate through from the old begin to new begin to calculate the amount to subctract so worst case scenario is (N-1). Thus the total complexity is O(N^2). Space complexity is O(M) and M is the number of users.
+Step 3 has two loops. The first loop is to go through all records. The second one is when moving forward the beginning of the window, it needs to iterate through from the old begin to new begin to calculate the amount to subctract so worst case scenario is (N-1). ~~Thus the total complexity is O(N^2).~~ It may look like O(N^2) but actually the worst case scenario is O(2 * N) which is moving current from 0 to N and moving begin from 0 to N. This is because in the inner loop the begin doesn't go backwards so the most number of moves the inner loop can move is N for the entire process. Space complexity is O(M) and M is the number of users.
 
-## Optimization
+~~## Optimization
 Step 3 could be optimized for shorter time by using more storage. Can use extra memory to store the amount spent from (that date - months) to that date for each date, so that don't need the second loop to calculate the amount to subtract. This would improve step 3 to O(N) but need additional space O(MD) and D is the number of dates and M is the number of users.I just think the worst case scenario will only very rarely happen in reality so went with the current implementation.
